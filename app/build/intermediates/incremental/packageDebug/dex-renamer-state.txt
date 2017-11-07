@@ -1,0 +1,7 @@
+#Mon Nov 06 23:07:46 EST 2017
+base.0=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_db438ad9ec2147fec4beb9bbe5747b96c93acf5e
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d135602f7b4d4f3b5da3c88f51974f00ba581289\\classes.dex
+base.1=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d135602f7b4d4f3b5da3c88f51974f00ba581289
+file.0=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_db438ad9ec2147fec4beb9bbe5747b96c93acf5e\\classes.dex

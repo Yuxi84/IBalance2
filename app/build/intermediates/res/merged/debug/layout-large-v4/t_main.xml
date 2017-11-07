@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/frag_list"
+                class="com.example.android.wifidirect.DeviceListFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/device_list">
+                <!-- Preview: layout=@layout/row_devices -->
+            </fragment>
+
+            <fragment
+                android:id="@+id/frag_detail"
+                class="com.example.android.wifidirect.DeviceDetailFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/device_detail">
+                <!-- Preview: layout=@layout/device_detail -->
+            </fragment>
+        </LinearLayout>
+
+        <fragment
+            android:name="com.example.android.wifidirect.GraphFragment"
+            android:id="@+id/frag_graph"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            tools:layout="@layout/graph"/>
+
+    </LinearLayout>
+</LinearLayout>

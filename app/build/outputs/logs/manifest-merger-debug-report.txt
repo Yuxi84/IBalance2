@@ -1,0 +1,146 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:2:1-42:12
+	package
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:2:70-110
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:3:29-54
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yzhan14\.android\build-cache\e6ed8f4eddf9642dc9e17d0580d36c7c7d7ba803\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\684649a320c5bea006cc881a4e50584a171e5a8d\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yzhan14\.android\build-cache\a7fd64ff5bb46a1ec0edf48985e0205a7ee6f610\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yzhan14\.android\build-cache\fe3abbecb2cfbe6263030c31846f456f8ede760e\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\0ddce563d1d2ec9ab969d3172b8c98320246019b\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\yzhan14\.android\build-cache\c6e629c36381717532567478835d7b71ff44a577\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yzhan14\.android\build-cache\05e37175a4f29d31ec45bd5ef080c82bf4ecbbc4\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yzhan14\.android\build-cache\bfd26f0aa21fc2669677f26c1e25a05b2a6efd2f\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yzhan14\.android\build-cache\bcc260ef841c63211793967261b8b4fceb801243\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yzhan14\.android\build-cache\acce401e7cfd303f4c49f23f1b818dcee1708430\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yzhan14\.android\build-cache\a23c7b918ec3c285ccec71a8a2f492699eadc92c\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yzhan14\.android\build-cache\c8538522a6057e5d317f9ad1dfb40cc70d28fa7e\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:5:15-41
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:6:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:7:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:11:5-75
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:11:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:12:22-78
+uses-feature#android.hardware.wifi.direct
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:15:5-88
+	android:required
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:15:63-86
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:15:19-62
+application
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:17:5-41:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yzhan14\.android\build-cache\e6ed8f4eddf9642dc9e17d0580d36c7c7d7ba803\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\684649a320c5bea006cc881a4e50584a171e5a8d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yzhan14\.android\build-cache\a7fd64ff5bb46a1ec0edf48985e0205a7ee6f610\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yzhan14\.android\build-cache\fe3abbecb2cfbe6263030c31846f456f8ede760e\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\yzhan14\.android\build-cache\c6e629c36381717532567478835d7b71ff44a577\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yzhan14\.android\build-cache\05e37175a4f29d31ec45bd5ef080c82bf4ecbbc4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yzhan14\.android\build-cache\bfd26f0aa21fc2669677f26c1e25a05b2a6efd2f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yzhan14\.android\build-cache\bcc260ef841c63211793967261b8b4fceb801243\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yzhan14\.android\build-cache\acce401e7cfd303f4c49f23f1b818dcee1708430\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yzhan14\.android\build-cache\a23c7b918ec3c285ccec71a8a2f492699eadc92c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yzhan14\.android\build-cache\c8538522a6057e5d317f9ad1dfb40cc70d28fa7e\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:19:9-41
+	android:icon
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:18:9-45
+	android:theme
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:20:9-50
+activity#com.example.android.wifidirect.RoleActivity
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:21:9-30:20
+	android:label
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:23:13-45
+	android:launchMode
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:23:46-75
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:22:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:24:13-29:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:25:17-26:65
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:26:21-62
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:27:17-28:71
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:28:21-68
+activity#com.example.android.wifidirect.WiFiDirectActivity
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:31:9-36:20
+	android:label
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:32:13-45
+	android:parentActivityName
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:33:13-55
+	android:launchMode
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:34:13-42
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:31:19-53
+service#com.example.android.wifidirect.FileTransferService
+ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:39:9-79
+	android:enabled
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:39:18-40
+	android:name
+		ADDED from C:\Users\yzhan14\AndroidStudioProjects\wifi-direct-demo1\app\src\main\AndroidManifest.xml:39:41-76
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\684649a320c5bea006cc881a4e50584a171e5a8d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\yzhan14\.android\build-cache\a7fd64ff5bb46a1ec0edf48985e0205a7ee6f610\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\yzhan14\.android\build-cache\fe3abbecb2cfbe6263030c31846f456f8ede760e\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\0ddce563d1d2ec9ab969d3172b8c98320246019b\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\yzhan14\.android\build-cache\c6e629c36381717532567478835d7b71ff44a577\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\yzhan14\.android\build-cache\05e37175a4f29d31ec45bd5ef080c82bf4ecbbc4\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\yzhan14\.android\build-cache\bfd26f0aa21fc2669677f26c1e25a05b2a6efd2f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\yzhan14\.android\build-cache\bcc260ef841c63211793967261b8b4fceb801243\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\yzhan14\.android\build-cache\acce401e7cfd303f4c49f23f1b818dcee1708430\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\yzhan14\.android\build-cache\a23c7b918ec3c285ccec71a8a2f492699eadc92c\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\yzhan14\.android\build-cache\c8538522a6057e5d317f9ad1dfb40cc70d28fa7e\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:26:9-47
