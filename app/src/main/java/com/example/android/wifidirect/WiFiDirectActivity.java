@@ -35,9 +35,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.wifidirect.DeviceListFragment.DeviceActionListener;
+import com.example.android.wifidirect.DeviceActionListener;
 
 /**
  * An activity that uses WiFi Direct APIs to discover and connect with available
@@ -56,6 +57,8 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
     private IntentFilter intentFilter = null;
     private Channel channel;
     private BroadcastReceiver receiver = null;
+
+    private boolean trialStarted = false;
 
     /**
      * @param isWifiP2pEnabled the isWifiP2pEnabled to set
@@ -275,14 +278,39 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
 
     @Override
     /**
-     * values: a string that contains x z separated by " "
+     * values: a string that contains time(s) x z separated by " "
      */
     public void onNewSensorData(String values) {
         //TODO: effciency
-        String[] x_z_str = values.split(" ");
-        double acclX = Double.parseDouble(x_z_str[0]);
-        double acclZ = Double.parseDouble(x_z_str[1]);
+        if (!trialStarted){return;}
+
+        String[] event_str = values.split(" ");
+        double time = Double.parseDouble(event_str[0]);
+        double acclX = Double.parseDouble(event_str[1]);
+        double acclZ = Double.parseDouble(event_str[2]);
         GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
-        gf.addData(acclX, acclZ);
+        gf.addData(time, acclX, acclZ);
     }
+
+    @Override
+    public void startTrial() {
+        trialStarted = true;
+    }
+
+    @Override
+    public void onTrialStopped() {
+        trialStarted = false;
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
+                String stats = gf.getStats();
+                TrialFragment tf = (TrialFragment) getFragmentManager().findFragmentById(R.id.frag_trial);
+                tf.showStats(stats);
+
+            }
+        }).start();
+    }
+
+
 }

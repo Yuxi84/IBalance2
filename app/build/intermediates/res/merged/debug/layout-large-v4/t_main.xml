@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,19 +29,29 @@
                 android:id="@+id/frag_detail"
                 class="com.example.android.wifidirect.DeviceDetailFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 tools:layout="@layout/device_detail">
-                <!-- Preview: layout=@layout/device_detail -->
+
+            </fragment>
+
+
+            <fragment
+                android:id="@+id/frag_trial"
+                class="com.example.android.wifidirect.TrialFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/t_fragment">
+
             </fragment>
         </LinearLayout>
 
         <fragment
-            android:name="com.example.android.wifidirect.GraphFragment"
             android:id="@+id/frag_graph"
+            android:name="com.example.android.wifidirect.GraphFragment"
             android:layout_width="0dp"
-            android:layout_weight="5"
             android:layout_height="match_parent"
-            tools:layout="@layout/graph"/>
+            android:layout_weight="5"
+            tools:layout="@layout/graph" />
 
     </LinearLayout>
 </LinearLayout>

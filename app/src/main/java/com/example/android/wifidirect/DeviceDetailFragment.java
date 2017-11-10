@@ -49,7 +49,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.android.wifidirect.DeviceListFragment.DeviceActionListener;
+import com.example.android.wifidirect.DeviceActionListener;
 
 /**
  * A fragment that manages a particular peer and allows interaction with device
@@ -77,6 +77,8 @@ public class DeviceDetailFragment extends Fragment
 
 	private SensorManager sensorManager;
 	private Sensor sensor;
+	private long time_base = 0;
+	private static final double NS2S = 1.0d/1000000000.0d;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -86,7 +88,7 @@ public class DeviceDetailFragment extends Fragment
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-		mContentView = inflater.inflate(R.layout.device_detail, null);
+		mContentView = inflater.inflate(R.layout.device_detail, container, false);
 		mContentView.findViewById(R.id.btn_connect).setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -286,10 +288,16 @@ public class DeviceDetailFragment extends Fragment
 		if (event.accuracy == SensorManager.SENSOR_STATUS_UNRELIABLE) {
 			return;
 		}
+		if (time_base == 0){
+			time_base = event.timestamp;
+		}
+		final double elapsed_sec = (event.timestamp - time_base)*NS2S;
+
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				pw.println(event.values[0] + " " + event.values[2]); // do not need y value
+				// Y value not needed
+				pw.println(elapsed_sec + " " + event.values[0] + " " + event.values[2]);
 			}
 		}).start();
 	}
@@ -298,6 +306,8 @@ public class DeviceDetailFragment extends Fragment
 	public void onAccuracyChanged(Sensor sensor, int i) {
 		//TODO:
 	}
+
+
 
 	/**
 	 * A simple server socket that accepts connection and writes some data on
@@ -368,9 +378,7 @@ public class DeviceDetailFragment extends Fragment
 ////		protected void onPostExecute(Void result) {
 ////			if (result != null) {
 ////				statusText.setText("File copied - " + result);
-////				Intent intent = new Intent();
-////				intent.setAction(android.content.Intent.ACTION_VIEW);
-////				intent.setDataAndType(Uri.parse("file://" + result), "image/*");
+////				Intent intent = new Intent();");
 ////				context.startActivity(intent);
 ////			}
 ////

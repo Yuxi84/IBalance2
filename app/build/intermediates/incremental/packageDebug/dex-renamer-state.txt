@@ -1,4 +1,4 @@
-#Mon Nov 06 23:07:46 EST 2017
+#Fri Nov 10 01:01:12 EST 2017
 base.0=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_db438ad9ec2147fec4beb9bbe5747b96c93acf5e
 renamed.1=classes2.dex
 renamed.0=classes.dex

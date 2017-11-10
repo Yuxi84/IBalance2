@@ -193,17 +193,17 @@ public class DeviceListFragment extends ListFragment implements PeerListListener
      * An interface-callback for the activity to listen to fragment interaction
      * events.
      */
-    public interface DeviceActionListener {
-
-        void showDetails(WifiP2pDevice device);
-
-        void cancelDisconnect();
-
-        void connect(WifiP2pConfig config);
-
-        void disconnect();
-
-        void onNewSensorData(String values);
-    }
+//    public interface DeviceActionListener {
+//
+//        void showDetails(WifiP2pDevice device);
+//
+//        void cancelDisconnect();
+//
+//        void connect(WifiP2pConfig config);
+//
+//        void disconnect();
+//
+//        void onNewSensorData(String values);
+//    }
 
 }

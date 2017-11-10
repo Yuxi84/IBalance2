@@ -76,7 +76,7 @@ public class ServerAsyncTask extends AsyncTask<Void, String, Void> {
     protected void onProgressUpdate(String... values) {
         statusText.setText(values[0]);
         // notify the data to parent acitivity which can then tell graph view
-        ((DeviceListFragment.DeviceActionListener)context).onNewSensorData(values[0]);
+        ((DeviceActionListener)context).onNewSensorData(values[0]);
     }
 
 		/*

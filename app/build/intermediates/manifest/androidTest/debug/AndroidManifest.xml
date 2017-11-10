@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.wifidirect.test">
+    package="com.example.android.wifidirect.test" >
 
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25" />
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="25" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.example.android.wifidirect"
+        android:targetPackage="com.example.android.wifidirect" />
 
     <application>
         <uses-library android:name="android.test.runner" />
     </application>
 
-    <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.example.android.wifidirect"
-                     android:handleProfiling="false"
-                     android:functionalTest="false"
-                     android:label="Tests for com.example.android.wifidirect"/>
 </manifest>

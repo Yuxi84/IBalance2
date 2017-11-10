@@ -3138,8 +3138,8 @@ containing a value of this type.
         public static final int alertTitle=0x7f0c005f;
         public static final int all=0x7f0c0014;
         public static final int always=0x7f0c0041;
-        public static final int atn_direct_discover=0x7f0c00b4;
-        public static final int atn_direct_enable=0x7f0c00b3;
+        public static final int atn_direct_discover=0x7f0c00b8;
+        public static final int atn_direct_enable=0x7f0c00b7;
         public static final int auto=0x7f0c002d;
         public static final int basic=0x7f0c0015;
         public static final int beginning=0x7f0c003f;
@@ -3186,8 +3186,9 @@ containing a value of this type.
         public static final int fill_vertical=0x7f0c0033;
         public static final int fixed=0x7f0c0046;
         public static final int frag_detail=0x7f0c0094;
-        public static final int frag_graph=0x7f0c00b0;
+        public static final int frag_graph=0x7f0c00b3;
         public static final int frag_list=0x7f0c0093;
+        public static final int frag_trial=0x7f0c00b4;
         public static final int group_ip=0x7f0c008c;
         public static final int group_owner=0x7f0c008b;
         public static final int home=0x7f0c0004;
@@ -3206,7 +3207,7 @@ containing a value of this type.
         public static final int listMode=0x7f0c0018;
         public static final int list_item=0x7f0c004f;
         public static final int live=0x7f0c0091;
-        public static final int masked=0x7f0c00b2;
+        public static final int masked=0x7f0c00b6;
         public static final int media_actions=0x7f0c009b;
         public static final int middle=0x7f0c0040;
         public static final int mini=0x7f0c003e;
@@ -3270,6 +3271,8 @@ containing a value of this type.
         public static final int status_text=0x7f0c008e;
         public static final int submenuarrow=0x7f0c0065;
         public static final int submit_area=0x7f0c0076;
+        public static final int t_start_btn=0x7f0c00b0;
+        public static final int t_stop_btn=0x7f0c00b1;
         public static final int tabMode=0x7f0c001a;
         public static final int text=0x7f0c00aa;
         public static final int text2=0x7f0c00a8;
@@ -3283,6 +3286,7 @@ containing a value of this type.
         public static final int title=0x7f0c0051;
         public static final int titleDividerNoCustom=0x7f0c0060;
         public static final int title_template=0x7f0c005e;
+        public static final int tmp_result=0x7f0c00b2;
         public static final int top=0x7f0c0037;
         public static final int topPanel=0x7f0c005d;
         public static final int touch_outside=0x7f0c007c;
@@ -3291,7 +3295,7 @@ containing a value of this type.
         public static final int up=0x7f0c000d;
         public static final int useLogo=0x7f0c0020;
         public static final int view_offset_helper=0x7f0c000e;
-        public static final int visible=0x7f0c00b1;
+        public static final int visible=0x7f0c00b5;
         public static final int withText=0x7f0c0045;
         public static final int wrap=0x7f0c0011;
         public static final int wrap_content=0x7f0c002c;
@@ -3374,7 +3378,8 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f03003f;
         public static final int select_dialog_singlechoice_material=0x7f030040;
         public static final int support_simple_spinner_dropdown_item=0x7f030041;
-        public static final int t_main=0x7f030042;
+        public static final int t_fragment=0x7f030042;
+        public static final int t_main=0x7f030043;
     }
     public static final class menu {
         public static final int action_items=0x7f0d0000;
@@ -3441,9 +3446,12 @@ containing a value of this type.
         public static final int search_menu_title=0x7f060013;
         public static final int send_data_string=0x7f06003c;
         public static final int sending_sensor_data=0x7f06003d;
+        public static final int start=0x7f06003e;
         public static final int status_bar_notification_info_overflow=0x7f060014;
-        public static final int therapist=0x7f06003e;
-        public static final int yes=0x7f06003f;
+        public static final int stop=0x7f06003f;
+        public static final int therapist=0x7f060040;
+        public static final int trial=0x7f060041;
+        public static final int yes=0x7f060042;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0800a1;
