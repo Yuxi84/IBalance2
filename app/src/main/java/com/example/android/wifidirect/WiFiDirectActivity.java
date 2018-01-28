@@ -300,16 +300,10 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
     @Override
     public void onTrialStopped() {
         trialStarted = false;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
                 GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
                 String stats = gf.getStats();
                 TrialFragment tf = (TrialFragment) getFragmentManager().findFragmentById(R.id.frag_trial);
                 tf.showStats(stats);
-
-            }
-        }).start();
     }
 
 

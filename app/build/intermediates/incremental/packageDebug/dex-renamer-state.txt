@@ -1,7 +1,7 @@
-#Fri Nov 10 01:01:12 EST 2017
-base.0=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_db438ad9ec2147fec4beb9bbe5747b96c93acf5e
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d135602f7b4d4f3b5da3c88f51974f00ba581289\\classes.dex
-base.1=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d135602f7b4d4f3b5da3c88f51974f00ba581289
-file.0=C\:\\Users\\yzhan14\\AndroidStudioProjects\\wifi-direct-demo1\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_db438ad9ec2147fec4beb9bbe5747b96c93acf5e\\classes.dex
+#Sun Jan 28 18:00:41 EST 2018
+base.0=C\:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_df94d3218108cb21a1c29b86af41a1c7af625a1a
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_774d6fce2c3af81e46be16fe62e0d90d5dd0a560\\classes.dex
+base.1=C\:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_774d6fce2c3af81e46be16fe62e0d90d5dd0a560
+file.0=C\:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_df94d3218108cb21a1c29b86af41a1c7af625a1a\\classes.dex
