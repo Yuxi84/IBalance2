@@ -15,6 +15,8 @@ import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.util.ArrayList;
+
 /**
  * Created by yzhan14 on 11/5/2017.
  */
@@ -89,4 +91,8 @@ public class GraphFragment extends Fragment {
     public String getStats(){
         return Double.toString(sensor_data.getJERK());
     }
+    public TrialData getTrialData(){
+        return sensor_data;
+    }
+
 }

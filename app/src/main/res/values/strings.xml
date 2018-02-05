@@ -26,4 +26,7 @@
     <string name="trial">TRIAL</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="session_stats">SESSION STATS</string>
+    <string name="enter_file_name">Enter file name</string>
+    <string name="export">Export</string>
 </resources>

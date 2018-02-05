@@ -24,6 +24,14 @@ public class TrialData {
         sensor_event_data.add(row);
     }
 
+    public ArrayList<double[]> get_sensor_data(){
+        return sensor_event_data;
+    }
+
+    public String[] get_header(){
+        return HEADER;
+    }
+
     /**
      * sway jerkiness
      * @return time derivative of acceleration

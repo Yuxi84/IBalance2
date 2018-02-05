@@ -16,11 +16,13 @@
 
 package com.example.android.wifidirect;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pManager;
@@ -29,6 +31,8 @@ import android.net.wifi.p2p.WifiP2pManager.Channel;
 import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -39,6 +43,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.wifidirect.DeviceActionListener;
+
+import java.util.ArrayList;
 
 /**
  * An activity that uses WiFi Direct APIs to discover and connect with available
@@ -59,6 +65,8 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
     private BroadcastReceiver receiver = null;
 
     private boolean trialStarted = false;
+
+    private static final int REQUEST_WRITE_STORAGE = 112;
 
     /**
      * @param isWifiP2pEnabled the isWifiP2pEnabled to set
@@ -300,10 +308,60 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
     @Override
     public void onTrialStopped() {
         trialStarted = false;
+        // display stats for trial
                 GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
                 String stats = gf.getStats();
                 TrialFragment tf = (TrialFragment) getFragmentManager().findFragmentById(R.id.frag_trial);
                 tf.showStats(stats);
+
+        // suggest users to export data as csv file
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_WRITE_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
+                    TrialData sensor_data = gf.getTrialData();
+                    //TODO: check arg input! fileName
+                    new Thread(new WriteCSV(sensor_data, "default")).start();
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request.
+        }
+    }
+
+    @Override
+    public void startExport(String fileName){
+        //check permission first
+
+        //check permission at run time
+        boolean hasPermission = (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+        if (!hasPermission) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_WRITE_STORAGE);
+        }else{
+
+        GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
+        TrialData sensor_data = gf.getTrialData();
+        //TODO: check arg input
+        new Thread(new WriteCSV(sensor_data, fileName)).start();}
     }
 
 

@@ -21,4 +21,6 @@ public interface DeviceActionListener {
     void startTrial();
 
     void onTrialStopped();
+
+    void startExport(String fileName);
 }

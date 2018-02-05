@@ -35,14 +35,36 @@
             android:text="@string/stop"
             android:id="@+id/t_stop_btn"/>
     </LinearLayout>
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/session_stats" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/holo_blue_light" />
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
         android:textColor="@android:color/white"
         android:id="@+id/tmp_result">
     </TextView>
-
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_file_name"
+        android:id="@+id/file_name_input"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/export"
+        android:layout_gravity="right"
+        android:id="@+id/t_export_btn"/>
 </LinearLayout>
