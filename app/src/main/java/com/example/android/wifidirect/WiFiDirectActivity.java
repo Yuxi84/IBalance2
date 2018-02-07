@@ -29,6 +29,7 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.ActionListener;
 import android.net.wifi.p2p.WifiP2pManager.Channel;
 import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
@@ -67,6 +68,7 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
     private boolean trialStarted = false;
 
     private static final int REQUEST_WRITE_STORAGE = 112;
+    private String trial_file_name = "";
 
     /**
      * @param isWifiP2pEnabled the isWifiP2pEnabled to set
@@ -292,6 +294,7 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
         //TODO: effciency
         if (!trialStarted){return;}
 
+
         String[] event_str = values.split(" ");
         double time = Double.parseDouble(event_str[0]);
         double acclX = Double.parseDouble(event_str[1]);
@@ -326,18 +329,10 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    // permission was granted, yay! Do the
-                    GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
-                    TrialData sensor_data = gf.getTrialData();
-                    //TODO: check arg input! fileName
-                    new Thread(new WriteCSV(sensor_data, "default")).start();
+                    // permission was granted
+                    export();
 
-                } else {
-
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
                 }
-                return;
             }
 
             // other 'case' lines to check for other
@@ -347,22 +342,28 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
 
     @Override
     public void startExport(String fileName){
-        //check permission first
+        trial_file_name = fileName;
 
-        //check permission at run time
+        //check write storage permission at run time
         boolean hasPermission = (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
         if (!hasPermission) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     REQUEST_WRITE_STORAGE);
-        }else{
-
-        GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
-        TrialData sensor_data = gf.getTrialData();
-        //TODO: check arg input
-        new Thread(new WriteCSV(sensor_data, fileName)).start();}
+        }else {
+            export();
+        }
     }
 
+    public void export(){
+        GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
+        TrialData sensor_data = gf.getTrialData();
 
+        //TODO: check arg input
+        //new Thread(new WriteCSV(sensor_data, trial_file_name)).start();
+        WriteCSV writeCSV = new WriteCSV(getApplicationContext());
+//        writeCSV.execute(sensor_data,trial_file_name);
+        writeCSV.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, sensor_data, trial_file_name);
+    }
 }

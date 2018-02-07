@@ -2,15 +2,6 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\05e37175a4f29d31ec45bd5ef080c82bf4ecbbc4\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_847538800c4bc10c723ea746a110add9257a174f.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\yzhan14\IBalance2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
@@ -18,15 +9,6 @@
         revision="25.0.3"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_df94d3218108cb21a1c29b86af41a1c7af625a1a\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\c8538522a6057e5d317f9ad1dfb40cc70d28fa7e\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_adc69616771523953b8ddff1a2e7d0c743ad447d.jar" />
     </item>
     <item
         is-multidex="true"
@@ -38,139 +20,13 @@
         <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\transforms\dex\debug\folders\1000\2\GraphView-4.2.1_4f9e66a3c8677925c47054d9a355795245c2f626\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\0ddce563d1d2ec9ab969d3172b8c98320246019b\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_5667a1f2a59db8020093277cf5f0f196dd9aae29.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\IBalance2\app\libs\GraphView-4.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3626a38455159707e355da96a61e598fbbc049e9">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\GraphView-4.2.1_4f9e66a3c8677925c47054d9a355795245c2f626.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\a23c7b918ec3c285ccec71a8a2f492699eadc92c\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_c6e18cd962d4ffec7a9c8f9c3d2157c6e9e210f3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\684649a320c5bea006cc881a4e50584a171e5a8d\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_713c83cf09979dc2e600bddba392a14a2944c47f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\a7fd64ff5bb46a1ec0edf48985e0205a7ee6f610\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_ed405352f2a26b316ebc40c54f209e86c487fd7a.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\yzhan14\IBalance2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="de1905a51572557c96555b7b47c9858c4b3ee2d8">
+        sha1="34a66daf9fb07c7c283191465eb0ba31c64872b8">
         <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_774d6fce2c3af81e46be16fe62e0d90d5dd0a560\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\AndroidSDK\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_caab4f08ce5e946c7639a1ae04a92cd75edf5b21.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\acce401e7cfd303f4c49f23f1b818dcee1708430\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_f6c759019fa1f23385f0473c128219267c40eed5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_5787464052fc266edadab1d12b2a1b4008abe802.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\c6e629c36381717532567478835d7b71ff44a577\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_8edd27f90a1155a4f47cab2fdf581bd72d3f5f64.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\bcc260ef841c63211793967261b8b4fceb801243\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_c430696e8169122a79a50244a26e8009b510ac16.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\bfd26f0aa21fc2669677f26c1e25a05b2a6efd2f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_7fd8d83188042dbad7c2be66372ee968909d1571.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_3f290fbfb13d788a666283eddb9494087c987258.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\daecfe8d294a71158d4cc7ad91f7ac39c0e0e234\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_7fafac4f4aa0b2f0684a4d2bb73db22b1c4f4f94.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yzhan14\.android\build-cache\fe3abbecb2cfbe6263030c31846f456f8ede760e\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\classes_8a04892038c6fedd552882af0fb6e14b6ac1f2ee.jar" />
     </item>
 
 </items>

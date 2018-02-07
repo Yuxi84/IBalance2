@@ -16,12 +16,12 @@
         "source": "C:\\Users\\yzhan14\\.android\\build-cache\\684649a320c5bea006cc881a4e50584a171e5a8d\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\yzhan14\\.android\\build-cache\\684649a320c5bea006cc881a4e50584a171e5a8d\\output\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "C:\\Users\\yzhan14\\.android\\build-cache\\684649a320c5bea006cc881a4e50584a171e5a8d\\output\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\yzhan14\\.android\\build-cache\\684649a320c5bea006cc881a4e50584a171e5a8d\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\yzhan14\\IBalance2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
