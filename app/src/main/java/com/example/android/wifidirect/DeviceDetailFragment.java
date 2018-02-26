@@ -51,6 +51,8 @@ import android.widget.TextView;
 
 import com.example.android.wifidirect.DeviceActionListener;
 
+import javax.xml.datatype.Duration;
+
 /**
  * A fragment that manages a particular peer and allows interaction with device
  * i.e. setting up network connection and transferring data.
@@ -79,6 +81,14 @@ public class DeviceDetailFragment extends Fragment
 	private Sensor sensor;
 	private long time_base = 0;
 	private static final double NS2S = 1.0d/1000000000.0d;
+	private static final double DELAY_CONTROL = 0.02;
+
+    //initialize sensor data to zerop
+    private double accX = 0;
+    private double accY = 0;
+    private double accZ = 0;
+    private long interval_start;
+    private boolean data_flagged = false;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -125,23 +135,12 @@ public class DeviceDetailFragment extends Fragment
 					}
 				});
 
-//		mContentView.findViewById(R.id.btn_start_client).setOnClickListener(
-//				new View.OnClickListener() {
-//
-//					@Override
-//					public void onClick(View v) {
-//						// Allow user to pick an image from Gallery or other
-//						// registered apps
-//						Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-//						intent.setType("image/*");
-//						startActivityForResult(intent, CHOOSE_FILE_RESULT_CODE);
-//					}
-//				});
 
 		//sensors
 		//TODO getActivity , OLD getContext
 		sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
-		sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+		//TODO: changed to sensor that includes gravity for testing data, may change to linear_acceleration later
+		sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
 		//TODO
 		mContentView.findViewById(R.id.btn_send_data).setOnClickListener(
@@ -158,13 +157,11 @@ public class DeviceDetailFragment extends Fragment
 									cSocket.connect(new InetSocketAddress(IP_SERVER, PORT), 500);
 									pw = new PrintWriter(cSocket.getOutputStream(), true);
 
-//									TextView statusText = (TextView) mContentView.findViewById(R.id.status_text);
-//									statusText.setText(R.string.sending_sensor_data);
 
 									//TODO: close socket and pw later
 
 									// register sensor listener if null
-									sensorManager.registerListener(DeviceDetailFragment.this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+									sensorManager.registerListener(DeviceDetailFragment.this, sensor, SensorManager.SENSOR_DELAY_GAME);
 								} catch (IOException e) {
 									e.printStackTrace();
 								}
@@ -175,6 +172,21 @@ public class DeviceDetailFragment extends Fragment
 					}
 				}
 		);
+
+        mContentView.findViewById(R.id.btn_stop_data).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                //TODO: denote terminate
+                                pw.println(" ");
+                            }
+                        }).start();
+                    }
+                }
+        );
 
 		return mContentView;
 	}
@@ -285,22 +297,42 @@ public class DeviceDetailFragment extends Fragment
 
 	@Override
 	public void onSensorChanged(final SensorEvent event) {
-		if (event.accuracy == SensorManager.SENSOR_STATUS_UNRELIABLE) {
-			return;
-		}
-		if (time_base == 0){
-			time_base = event.timestamp;
-		}
-		final double elapsed_sec = (event.timestamp - time_base)*NS2S;
-
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				// Y value not needed
-				pw.println(elapsed_sec + " " + event.values[0] + " " + event.values[2]);
-			}
-		}).start();
-	}
+        if (event.accuracy == SensorManager.SENSOR_STATUS_UNRELIABLE) {
+            return;
+        }
+        if (time_base == 0) {
+            time_base = event.timestamp;
+            interval_start = event.timestamp;
+        }
+        final double elapsed_sec = (event.timestamp - time_base) * NS2S;
+        double duration = (event.timestamp - interval_start) * NS2S;
+        // only accept sensor data at interval greater than 20 milliseconds (0.02s)
+        if (duration >= DELAY_CONTROL) {
+            accX = event.values[0];
+            accY = event.values[1];
+            accZ = event.values[2];
+            data_flagged = false;
+            interval_start = event.timestamp;
+        } else {
+            data_flagged = true;
+        }
+        //TODO: thread priority?
+        if (data_flagged) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    pw.println(elapsed_sec + " " + accX + " " + accY+ " " + accZ+ " " + "1");
+                }
+            }).start();
+        } else {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    pw.println(elapsed_sec + " " + accX + " " + accY + " " + accZ+" "+"0");
+                }
+            }).start();
+        }
+    }
 
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int i) {

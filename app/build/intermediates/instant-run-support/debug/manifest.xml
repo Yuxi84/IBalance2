@@ -45,6 +45,7 @@
             android:launchMode="standard"
             android:parentActivityName="com.example.android.wifidirect.RoleActivity" >
         </activity>
+        <activity android:name="com.example.android.wifidirect.Callibration" />
 
         <!-- Used for transferring files  after a successful connection -->
         <service

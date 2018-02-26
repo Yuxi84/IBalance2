@@ -298,9 +298,11 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
         String[] event_str = values.split(" ");
         double time = Double.parseDouble(event_str[0]);
         double acclX = Double.parseDouble(event_str[1]);
-        double acclZ = Double.parseDouble(event_str[2]);
+        double acclY = Double.parseDouble(event_str[2]);
+        double acclZ = Double.parseDouble(event_str[3]);
+        double flag = Double.parseDouble(event_str[4]);
         GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
-        gf.addData(time, acclX, acclZ);
+        gf.addData(time, acclX, acclY,acclZ,flag);
     }
 
     @Override
@@ -360,10 +362,7 @@ public class WiFiDirectActivity extends Activity implements ChannelListener, Dev
         GraphFragment gf = (GraphFragment) getFragmentManager().findFragmentById(R.id.frag_graph);
         TrialData sensor_data = gf.getTrialData();
 
-        //TODO: check arg input
-        //new Thread(new WriteCSV(sensor_data, trial_file_name)).start();
         WriteCSV writeCSV = new WriteCSV(getApplicationContext());
-//        writeCSV.execute(sensor_data,trial_file_name);
         writeCSV.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, sensor_data, trial_file_name);
     }
 }

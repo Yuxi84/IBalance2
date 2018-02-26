@@ -51,67 +51,6 @@ public class WriteCSV extends AsyncTask<Object, Void, Void>{
         mContext = aContext;
     }
 
-    //delete later for runnable
-    //@Override
-    public void run() {
-        // use this later
-        boolean storageState = isExternalStorageWritable();
-        //TODO: error handling
-
-
-        try {
-            File f = getSensorDataDir(fileName);
-            if (f.exists()) {
-                fileWriter = new FileWriter(f, true);
-            }else{
-                Log.d("IO", "run: file not created");
-            }
-
-            //write header
-            boolean first = true;
-            String[] header = this.data.get_header();
-            for (String h: header){
-               if (!first){
-                   fileWriter.append(DELIMITER);
-               }
-               fileWriter.append(h);
-                first = false;
-            }
-            fileWriter.append(NEW_LINE_SEPARATOR);
-
-            //write trial data
-            ArrayList<double[]> sensor_data = data.get_sensor_data();
-            for (double[] row : sensor_data){
-                first = true;
-                for (double value: row){
-                    if (!first){
-                        fileWriter.append(DELIMITER);
-                    }
-                    fileWriter.append(String.valueOf(value));
-                    first = false;
-                }
-                fileWriter.append(NEW_LINE_SEPARATOR);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        finally {
-            try{
-                fileWriter.flush();
-                fileWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        Log.i("INFO","ohoh");
-    }
-
 
     @Override
     protected Void doInBackground(Object... params) {
@@ -126,7 +65,7 @@ public class WriteCSV extends AsyncTask<Object, Void, Void>{
         try {
             File f = getSensorDataDir(fileName);
             if (f.exists()) {
-                fileWriter = new FileWriter(f, true);
+                fileWriter = new FileWriter(f);
             }else{
                 Log.d("IO", "run: file not created");
             }
@@ -172,12 +111,6 @@ public class WriteCSV extends AsyncTask<Object, Void, Void>{
         return  null;
     }
 
-/*    @Override
-    protected Void doInBackground(Object... params) {
-
-        Log.i("INFO","Background");
-        return null;
-    }*/
 
     @Override
     protected void onPostExecute(Void aVoid) {

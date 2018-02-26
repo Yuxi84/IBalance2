@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:2:70-110
 		INJECTED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml
@@ -74,7 +74,7 @@ ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:15:5-88
 	android:name
 		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:15:19-62
 application
-ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:17:5-41:19
+ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:17:5-42:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\yzhan14\.android\build-cache\daecfe8d294a71158d4cc7ad91f7ac39c0e0e234\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\684649a320c5bea006cc881a4e50584a171e5a8d\output\AndroidManifest.xml:29:5-20
@@ -121,12 +121,16 @@ ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:31:9-36:2
 		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:34:13-42
 	android:name
 		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:31:19-53
-service#com.example.android.wifidirect.FileTransferService
-ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:39:9-79
-	android:enabled
-		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:39:18-40
+activity#com.example.android.wifidirect.Callibration
+ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:37:9-49
 	android:name
-		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:39:41-76
+		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:37:19-47
+service#com.example.android.wifidirect.FileTransferService
+ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:40:9-79
+	android:enabled
+		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:40:18-40
+	android:name
+		ADDED from C:\Users\yzhan14\IBalance2\app\src\main\AndroidManifest.xml:40:41-76
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\yzhan14\.android\build-cache\adfe4240cc4e22042c0a14c72db51d6deae3aedc\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\yzhan14\.android\build-cache\684649a320c5bea006cc881a4e50584a171e5a8d\output\AndroidManifest.xml:25:5-27:34

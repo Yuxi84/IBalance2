@@ -1,6 +1,7 @@
 package com.example.android.wifidirect;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -28,6 +29,7 @@ public class TrialFragment extends Fragment{
         Button start_btn = (Button) rootView.findViewById(R.id.t_start_btn);
         Button stop_btn = (Button) rootView.findViewById(R.id.t_stop_btn);
         Button export_btn = (Button) rootView.findViewById(R.id.t_export_btn);
+        Button train_btn  =(Button) rootView.findViewById(R.id.btn_train);
 
         // default file name
         Calendar myCalendar = Calendar.getInstance();
@@ -55,6 +57,14 @@ public class TrialFragment extends Fragment{
                 //TODO: check input
                 String fileName = String.valueOf(fileNameInput.getText());
                 ((DeviceActionListener)getActivity()).startExport(fileName);
+            }
+        });
+
+        train_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Callibration.class);
+                getActivity().startActivity(intent);
             }
         });
         return rootView;

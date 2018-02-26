@@ -34,6 +34,7 @@
             android:launchMode="standard">
 
         </activity>
+        <activity android:name=".Callibration"/>
 
         <!-- Used for transferring files  after a successful connection -->
         <service android:enabled="true" android:name=".FileTransferService" />

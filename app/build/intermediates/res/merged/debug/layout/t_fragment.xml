@@ -68,4 +68,9 @@
         android:text="@string/export"
         android:layout_gravity="right"
         android:id="@+id/t_export_btn"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_training"
+        android:id="@+id/btn_train"/>
 </LinearLayout>

@@ -76,14 +76,14 @@ public class GraphFragment extends Fragment {
     }
 
 
-    public void addData(double time, double acclX, double acclZ) {
+    public void addData(double time, double acclX, double acclY, double acclZ, double flag) {
 
         series1.appendData(new DataPoint(time, acclX),true, Integer.MAX_VALUE);
         series2.appendData(new DataPoint(time, acclZ), true, Integer.MAX_VALUE);
 
         // TODO: this check may not be necessary
         if (sensor_data != null){
-            sensor_data.addData(time,acclX, acclZ);
+            sensor_data.addData(time,acclX, acclY, acclZ,flag);
         }
         //data_count++;
     }

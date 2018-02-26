@@ -23,6 +23,7 @@ public class ServerAsyncTask extends AsyncTask<Void, String, Void> {
     private Context context;
     private TextView statusText;
     private int PORT;
+    private static final String TERMINATE_SIGNAL = " ";
 
     /**
      * @param context
@@ -59,11 +60,12 @@ public class ServerAsyncTask extends AsyncTask<Void, String, Void> {
 //				return f.getAbsolutePath();
             BufferedReader br = new BufferedReader(new InputStreamReader(inputstream));
             String str;
-            while ((str = br.readLine()) != null) {
+            while (!(str = br.readLine()).equals(TERMINATE_SIGNAL)) {
                 publishProgress(str);
             }
             br.close();
             client.close();
+            serverSocket.close();
 
         } catch (IOException e) {
             Log.e(WiFiDirectActivity.TAG, e.getMessage());

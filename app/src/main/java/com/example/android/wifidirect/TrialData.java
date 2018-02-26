@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class TrialData {
     private ArrayList<double[]> sensor_event_data;
-    private static final String[] HEADER = {"time", "ML(X-axis)", "AP(Z-axis)"};
+    private static final String[] HEADER = {"time", "ML(X-axis)", "AP(Z-axis)","Y-axis","Replicate_flag"};
     private static final int TIME_INDEX = 0;
     private static final int ML_INDEX = 1;
     private static final int AP_INDEX = 2;
@@ -19,8 +19,8 @@ public class TrialData {
         sensor_event_data = new ArrayList<>();
     }
 
-    public void addData(double t, double x, double z){
-        double[] row = {t,x,z};
+    public void addData(double t, double x, double y, double z, double flag){
+        double[] row = {t,x,z,y,flag};
         sensor_event_data.add(row);
     }
 
