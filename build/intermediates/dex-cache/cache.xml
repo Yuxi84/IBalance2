@@ -2,31 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\yzhan14\IBalance2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_df94d3218108cb21a1c29b86af41a1c7af625a1a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\yzhan14\IBalance2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="10944ffb1eb1f1129a8dc4476fff6fcf388aca8d">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_774d6fce2c3af81e46be16fe62e0d90d5dd0a560\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\yzhan14\IBalance2\app\libs\GraphView-4.2.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="3626a38455159707e355da96a61e598fbbc049e9">
-        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\transforms\dex\debug\folders\1000\2\GraphView-4.2.1_4f9e66a3c8677925c47054d9a355795245c2f626\classes.dex" />
+        <dex dex="C:\Users\yzhan14\IBalance2\app\build\intermediates\pre-dexed\debug\GraphView-4.2.1_4f9e66a3c8677925c47054d9a355795245c2f626.jar" />
     </item>
 
 </items>

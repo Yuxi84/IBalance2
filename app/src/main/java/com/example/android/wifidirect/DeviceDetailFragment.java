@@ -27,6 +27,7 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -42,6 +43,7 @@ import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager.ConnectionInfoListener;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -83,12 +85,14 @@ public class DeviceDetailFragment extends Fragment
 	private static final double NS2S = 1.0d/1000000000.0d;
 	private static final double DELAY_CONTROL = 0.02;
 
-    //initialize sensor data to zerop
+    //initialize sensor data to zero
     private double accX = 0;
     private double accY = 0;
     private double accZ = 0;
     private long interval_start;
     private boolean data_flagged = false;
+
+	private SensorHandler mSensorHandler;
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -177,6 +181,7 @@ public class DeviceDetailFragment extends Fragment
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+						sensorManager.unregisterListener(DeviceDetailFragment.this, sensor);
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
@@ -187,6 +192,34 @@ public class DeviceDetailFragment extends Fragment
                     }
                 }
         );
+
+		// set up print writer to transfer motion data for training
+		mContentView.findViewById(R.id.btn_sway_tracking).setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						new Thread(new Runnable() {
+							@TargetApi(Build.VERSION_CODES.M)
+							@Override
+							public void run() {
+								cSocket = new Socket();
+								try {
+									cSocket.bind(null);
+									//TODO: time out
+									cSocket.connect(new InetSocketAddress(IP_SERVER, PORT), 500);
+									Log.d("client","connected to server");
+									pw = new PrintWriter(cSocket.getOutputStream(), true);
+
+									//create sensor handler
+									mSensorHandler =  new SensorHandler(getContext(),pw);
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
+							}
+						}).start();
+					}
+				}
+		);
 
 		return mContentView;
 	}

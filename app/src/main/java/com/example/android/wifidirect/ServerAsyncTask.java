@@ -37,7 +37,7 @@ public class ServerAsyncTask extends AsyncTask<Void, String, Void> {
 
     @Override
     protected Void doInBackground(Void... params) {
-        //TODO: modify temporarily to test pw
+
         try {
             ServerSocket serverSocket = new ServerSocket(PORT);
             Log.d(WiFiDirectActivity.TAG, "Server: Socket opened");
