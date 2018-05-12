@@ -17,6 +17,10 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+/**
+ * Cite: https://github.com/deansponholz/Fish_Game/blob/master/app/src/main/java/com/example/deansponholz/fish_game/SensorHandler.java
+ */
+
 public class CalibrationFragment extends Fragment {
 
     private static final int PORT = 8988;
